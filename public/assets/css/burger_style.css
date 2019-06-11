@@ -1,0 +1,53 @@
+
+/* 
+==================================================
+General Styles
+==================================================
+*/
+
+/* html, body {
+	min-height: 100%;
+} */
+
+body {
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+	color: #777777;
+/*	background-color: #7F72B3; */
+		 
+		/* display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		min-height: 100vh; */
+
+}
+
+
+
+
+h2, h4 {
+
+}
+
+p {
+	line-height: 30px;
+	padding-top: 15px;
+}
+
+
+
+
+
+.burger-img {
+    height: 33%;
+    width: 33%;
+    display: inline-block;    
+}
+
+.header {
+    background-color: black;
+}
+
+.burger-creator {
+    
+}
