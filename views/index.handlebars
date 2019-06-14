@@ -4,13 +4,19 @@ Setup the index.handlebars to have the template that Handlebars can render onto.
 Create a button in index.handlebars that will submit the user input into the database.
 
  -->
- <div class="header">
- <img class="burger-img" src="assets/img/happy-burger.jpg" alt="Happy Little Burger">
- <img class="burger-img" src="assets/img/happy-burger.jpg" alt="Happy Little Burger">
- <img class="burger-img" src="assets/img/happy-burger.jpg" alt="Happy Little Burger">
+ <div class=" row header">
+     <div class="col-sm-4">
+ <img class="burger-img" src="assets/img/neon-burger2.jpg" alt="Happy Little Burger">
+ </div>
+  <div class="col-sm-4 header-title">
+ <h1>The Burger List</h1>
+ </div>
+  <div class="col-sm-4">
+ <img class="burger-img" src="assets/img/neon-burger2.jpg" alt="Happy Little Burger">
 </div>
-<h2>Burgers I Have Known</h2>
-<div class="row">
+</div>
+
+<div class="row content">
 
     <div class="col-sm-4 not-devoured">
         <h4>Burgers I will eat!</h4>
@@ -19,9 +25,9 @@ Create a button in index.handlebars that will submit the user input into the dat
             {{#unless devoured}}
             <div class="card mt-3">
                 <div class="card-body">
-                    <h5 class="card-title">{{this.id}}. {{this.burger_name}}</h5>
+                    <h5 class="card-title undevoured-card">{{this.id}}. {{this.burger_name}} {{> burgers/burger-block devoured=false}}</h5>
                     <div class="text-right">
-                        {{> burgers/burger-block devoured=false}}
+                       
                     </div>
                 </div>
             </div>
@@ -29,7 +35,7 @@ Create a button in index.handlebars that will submit the user input into the dat
             {{/each}}
       
     </div>
-    <div class="col-sm-4 burger-creator center-align">
+    <div class="col-sm-4 burger-creator">
         <h4>Add a Burger</h4>
         <form class="create-form">
             <div class="form-group">
@@ -46,12 +52,12 @@ Create a button in index.handlebars that will submit the user input into the dat
         <div class="card mt-3">
 
             <div class="card-body">
-                <h5 class="card-title">{{this.id}}. {{this.burger_name}}</h5>
+                <h5 class="card-title devoured-card">{{this.id}}. {{this.burger_name}}</h5>
                 <!--    <p class="card-text">{{this.desc}}</p>   -->
                 <!-- COMMENT THIS OUT WHEN SUBMITTING -->
-                <div class="text-right">
+               {{!--  <div class="text-right">
                     {{> burgers/burger-block devoured=true}}
-                </div>
+                </div> --}}
                 <!-- END COMMENT -->
             </div>
         </div>
